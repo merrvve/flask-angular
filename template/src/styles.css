@@ -1,0 +1,60 @@
+/* You can add global styles to this file, and also import other style files
+    Cornflower Blue
+#5E8AF8
+
+Vermilion
+#FB4C04
+
+Link Water
+#DFE5F8
+
+Cornflower
+#9ED0EE
+
+
+*/
+.html {
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
+}
+.bg-1 {
+  background-color: #B99095;
+}
+
+.bg-2 {
+  background-color: #FCB5AC;
+}
+
+.bg-3 {
+  background-color: #B5E5CF;
+}
+
+.bg-4 {
+  background-color: #3D5B59;
+}
+.bg-5 {
+  background-color: #343a35;
+}
+.navbar {
+  border: 2px solid #FCB5AC;
+}
+.border-1 {
+  border: 2px solid #FCB5AC;
+}
+.nav-item:hover {
+  background-color: #FCB5AC;
+  border-radius: 4px;
+}
+
+.main-1 {
+  border: 2px solid #B5E5CF;
+  transition: width;
+  transition-delay: 1s;
+  transition-duration: 2s;
+  transition-timing-function:ease-in-out;
+}
+.main-1:hover {
+    width: 50%;
+}
+
+
