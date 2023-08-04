@@ -1,0 +1,79 @@
+<div class="container-xxl py-5">
+  <div class="container py-5 px-lg-5">
+    <div class="row g-4">
+      <div class="container m-5">
+        <div class="row">
+          <div class="col-sm-10">
+            <div id="form">
+              <div id="step1" class="wow fadeInUp" data-wow-delay="0.03s" [hidden]="step!=0">
+                <h2 class="animated slideInLeft">Step 1.</h2>
+                <hr />
+                <h3>Let's organise your text into: </h3>
+                <a class="btn btn-light m-1 py-sm-2 px-sm-4 rounded-pill border-dark" [ngClass]="{'btn-dark': postType==1}" (click)="onPostType(1)"><i class="fas fa-th-large"></i> Presentation</a>
+
+                <a class="btn btn-light m-1 py-sm-2 px-sm-4 rounded-pill border-dark" [ngClass]="{'btn-dark': postType==2}" (click)="onPostType(2)"><i class="fab fa-instagram"></i> Instagram Posts</a>
+
+                <a class="btn btn-light m-1 py-sm-2 px-sm-4 rounded-pill border-dark" [ngClass]="{'btn-dark': postType==3}" (click)="onPostType(3)"><i class="fab fa-instagram"></i> Instagram Stories</a>
+
+                <a class="btn btn-light m-1 py-sm-2 px-sm-4 rounded-pill border-dark" [ngClass]="{'btn-dark': postType==4}" (click)="onPostType(4)"><i class="fab fa-twitter"></i> Twitter Posts</a>
+
+                <a class="btn btn-light m-1 py-sm-2 px-sm-4 rounded-pill border-dark" [ngClass]="{'btn-dark': postType==5}" (click)="onPostType(5)"><i class="fas fa-th-large"></i> Blog Post</a>
+
+                <h4 class="mt-2">
+                  For:
+                </h4>
+
+                <a class="btn btn-light m-1 py-sm-2 px-sm-4 rounded-pill border-dark" [ngClass]="{'btn-dark': forWho==1}" (click)="onPostType(postType,1)"> General Audience</a>
+
+                <a class="btn btn-light m-1 py-sm-2 px-sm-4 rounded-pill border-dark" [ngClass]="{'btn-dark': forWho==2}" (click)="onPostType(postType,2)"><i class="fa fa-handshake-o" aria-hidden="true"></i> Professionals</a>
+                <div class="text-end">
+                  <button class="btn btn-secondary" (click)="onNext(1)">Next</button>
+                </div>
+                <hr />
+              </div>
+              <div [hidden]="step==0" (click)="onNext(0)" style="cursor:pointer;">
+                <h3>Step 1. <i class="fa fa-check-square" aria-hidden="true"></i></h3>
+                Post Type: {{postType}}  For: {{forWho}}
+                <hr />
+              </div>
+              <div id="step2" [hidden]="step!=1" class="animated zoomIn" data-wow-delay="0.03s">
+                <h3 class="animated slideInLeft">Step 2. Text Input</h3>
+                or <a href="" class="btn btn-light m-1 py-sm-2 px-sm-4 rounded-pill border-dark">Upload PDF</a>
+
+
+                <textarea class="form-control m-2" rows="10"></textarea>
+
+                <div class="text-end">
+                  <button class="btn btn-secondary" (click)="onNext(2)">Submit</button>
+                </div>
+              </div>
+
+              <div [hidden]="step<2" (click)="onNext(1)" style="cursor:pointer;">
+                <h3>Step 2. <i class="fa fa-check-square" aria-hidden="true"></i></h3>
+                Text:
+                <hr />
+              </div>
+
+              <div id="step3" [hidden]="step!=2" class="animated zoomIn" data-wow-delay="0.03s">
+                <h3 class="animated slideInLeft">Step 3. Template</h3>
+                Templates list
+                <div class="text-end">
+                  <button class="btn btn-secondary" (click)="onNext(3)">Submit</button>
+                </div>
+              </div>
+
+              <div [hidden]="step<3" (click)="onNext(2)" style="cursor:pointer;">
+                <h3>Step 3. <i class="fa fa-check-square" aria-hidden="true"></i></h3>
+                Template:
+                <hr />
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

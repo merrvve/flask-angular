@@ -8,17 +8,17 @@ import { iSlide } from '../model/iSlide';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  apiResponse: any;
-  apiResponse2: any;
+  apiResponse: any=[];
+  apiResponse2: any =[];
   headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
   constructor(private http: HttpClient) {
-    this.http.get('http://localhost:5000/api/data').subscribe((response: any) => {
-      this.apiResponse = response.data;
-    });
+    //this.http.get('http://localhost:5000/api/data').subscribe((response: any) => {
+    //  this.apiResponse = response.data;
+    //});
     let slides: iSlide[] = [{ id:1,title:'title1', content:'content1', layout: 1 }]
-    this.http.post('http://localhost:5000/api/pptx', slides, { headers: this.headers }).subscribe((response: any) => {
-      this.apiResponse2 = response;
-    });
+    //this.http.post('http://localhost:5000/api/pptx', slides, { headers: this.headers }).subscribe((response: any) => {
+    //  this.apiResponse2 = response;
+    //});
   }
 }

@@ -1,0 +1,58 @@
+<div class="container-xxl py-5">
+  <div class="container py-5 px-lg-5">
+    <div class="row g-4">
+      <div class="container m-5">
+        <div class="row">
+          <div class="col-sm-5">
+            <div class="displayTableCell">
+              <div class="authBlock">
+                <h3>Sign In</h3>
+                <div class="formGroup">
+                  <input type="text"
+                         class="form-control m-1"
+                         placeholder="Username"
+                         #userName
+                         required />
+                </div>
+                <div class="formGroup">
+                  <input type="password"
+                         class="form-control m-1"
+                         placeholder="Password"
+                         #userPassword
+                         required />
+                </div>
+                <!-- Calling SignIn Api from AuthService -->
+                <div class="formGroup">
+                  <button
+                         class="btn btn-primary m-2"
+                         value="Log in"
+                         (click)="authService.SignIn(userName.value, userPassword.value)">Log In </button>
+                </div>
+                <div class="formGroup">
+                  <span class="or"><span class="orInner">Or</span></span>
+                </div>
+                <div class="forgotPassword">
+                  <a [routerLink]="['/forgot-password']">Forgot Password?</a>
+                </div>
+              </div>
+              <div class="redirectToLogin">
+                <span>
+                  Don't have an account?<a [routerLink]="['/register-user']">
+                    Sign Up
+                  </a>
+                </span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+

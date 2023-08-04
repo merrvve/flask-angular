@@ -1,2 +1,8 @@
 __pycache__/
 .vs/
+template/.angular
+template/.vscode
+template/.vs
+template/node_modules
+template/dist
+template/src/environments
